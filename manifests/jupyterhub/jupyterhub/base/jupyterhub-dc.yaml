@@ -126,6 +126,6 @@ spec:
           defaultMode: 420
           name: jupyterhub-cfg
         name: config
-  triggers:
-  - type: ConfigChange
+  #triggers:
+  #- type: ConfigChange
 
