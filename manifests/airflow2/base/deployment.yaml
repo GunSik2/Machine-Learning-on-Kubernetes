@@ -127,8 +127,8 @@ spec:
               value: app-aflow-airflow
             - name: AIRFLOW_WEBSERVER_PORT_NUMBER
               value: "8080"
-            - name: AIRFLOW__WEBSERVER__SECRET_KEY
-              value: "IKnowWhatYouDidLastYear"
+              #- name: AIRFLOW__WEBSERVER__SECRET_KEY
+              #value: "IKnowWhatYouDidLastYear"
             - name: AIRFLOW_BASE_URL
               value: http://127.0.0.1:8080
             - name: AIRFLOW_LDAP_ENABLE
@@ -295,10 +295,10 @@ spec:
               value: "no"
             - name: AIRFLOW__WEBSERVER__SECRET_KEY
               value: "IKnowWhatYouDidLastYear"
-            - name: AUTH_ROLE_PUBLIC
-              value: "Public"
-            - name: AIRFLOW__WEBSERVER__ENABLE_PROXY_FIX
-              value: "True"
+              #- name: AUTH_ROLE_PUBLIC
+              #value: "Public"
+              #- name: AIRFLOW__WEBSERVER__ENABLE_PROXY_FIX
+              #value: "True"
             - name: OAUTH_API_BASE_URL
               value: "https://$(KEYCLOAK_URL)"
             # - name: REQUESTS_CA_BUNDLE
