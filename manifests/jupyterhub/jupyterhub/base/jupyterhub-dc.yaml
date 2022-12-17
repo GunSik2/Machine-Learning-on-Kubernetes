@@ -17,8 +17,8 @@ spec:
       app: jupyterhub
       #deploymentconfig: jupyterhub
   strategy:
-    recreateParams:
-      timeoutSeconds: 1200
+          #recreateParams:
+          #timeoutSeconds: 1200
     type: Recreate
   template:
     metadata:

@@ -8,6 +8,7 @@ metadata:
   annotations:
     openshift.io/host.generated: 'true'
 spec:
+  ingressClassName: nginx
   tls:
     - hosts:
       - $(JUPYTERHUB_HOST)
