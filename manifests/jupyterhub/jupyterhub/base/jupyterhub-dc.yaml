@@ -13,8 +13,9 @@ metadata:
 spec:
   replicas: 1
   selector:
-    app: jupyterhub
-    deploymentconfig: jupyterhub
+    matchLabels:
+      app: jupyterhub
+      #deploymentconfig: jupyterhub
   strategy:
     recreateParams:
       timeoutSeconds: 1200
@@ -126,6 +127,6 @@ spec:
           defaultMode: 420
           name: jupyterhub-cfg
         name: config
-  triggers:
-  - type: ConfigChange
+        #triggers:
+        #- type: ConfigChange
 

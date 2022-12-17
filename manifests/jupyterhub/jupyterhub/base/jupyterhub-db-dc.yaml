@@ -11,9 +11,10 @@ spec:
   serviceName: jupyterhub-db
   replicas: 1
   selector:
-    app: jupyterhub
-    deploymentconfig: jupyterhub-db
-  strategy:
+    matchLabels:
+      app: jupyterhub
+      #deploymentconfig: jupyterhub-db
+  updateStrategy:
     type: RollingUpdate
   template:
     metadata:
@@ -66,5 +67,5 @@ spec:
           defaultMode: 420
           name: jupyterhub-cfg
         name: config
-  triggers:
-  - type: ConfigChange
+        #triggers:
+        #- type: ConfigChange
