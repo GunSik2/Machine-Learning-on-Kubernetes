@@ -26,6 +26,10 @@ spec:
       annotations:
         sidecar.istio.io/inject: "true"
     spec:
+      securitycontext:
+        runAsUser: 1000
+        fsGroup: 2000
+        runAsNonRoot: true
       containers:
       - image: quay.io/ml-aml-workshop/postgresql-96
         env:
